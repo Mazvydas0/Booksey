@@ -1,17 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BookCard({ title, book, altText, author }) {
   return (
-    <div className="flex flex-col items-center p-4 hover:text-orange-400">
-      <img
-        className="w-48 h-64 object-cover rounded-md shadow-md hover:opacity-50"
-        src={`https://mynextbucket-mike.s3.amazonaws.com/${book}.jpeg`}
-        alt={altText}
-      />
-      <div className="text-center mt-4">
-        <p className="text-gray-600">{author}</p>
-        <strong className="text-lg font-bold">{title}</strong>
+    <Link href={`/books/${book}`} className="no-underline text-black ">
+      <div
+        id="bookcard"
+        className="flex flex-col items-center justify-center p-4 w-52 hover:text-orange-300"
+      >
+        <Image
+          className="object-cover rounded-md shadow-md hover:opacity-50"
+          src={`https://${process.env.AWS_S3_HOSTNAME}/${book}.jpeg`}
+          alt={altText}
+          width="192"
+          height="256"
+        />
+        <div className="text-center mt-4">
+          <p className="text-gray-600">{author}</p>
+          <span className="text-lg font-bold">{title}</span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

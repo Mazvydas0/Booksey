@@ -8,11 +8,12 @@ import AI2 from "@/public/AI2.jpeg";
 import AI3 from "@/public/AI3.jpeg";
 import AI4 from "@/public/AI4.jpeg";
 
+
 const images = [
   { image: AI1, alt: "an AI generated picture 1" },
   { image: AI2, alt: "an AI generated picture 2" },
   { image: AI3, alt: "an AI generated picture 3" },
-  { image: AI4, alt: "an AI generated picture 4" },
+  { image: AI4, alt: "discount" }
 ];
 
 export default function ImageSlideshow() {
@@ -29,8 +30,8 @@ export default function ImageSlideshow() {
   }, []);
 
   return (
-    <div className="relative top-32 w-full h-96">
-      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
+    <div className="relative top-[120px] w-full h-96 ">
+      <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md">
         {images.map((image, index) => (
           <Image
             key={index}
