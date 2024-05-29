@@ -8,3 +8,10 @@ export default function Books() {
     </div>
   );
 }
+
+export function generateMetadata() {
+  return {
+    title: `All Books | Book Store Next`,
+    description: "Books sold by us",
+  };
+}

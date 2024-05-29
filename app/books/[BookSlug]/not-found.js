@@ -1,6 +1,7 @@
 import Link from "next/link";
-
+import { notFound } from "next/navigation";
 export default function NotFound() {
+
   return (
     
       <div className="container mt-44">

@@ -3,7 +3,7 @@
 import LogIn from "@/app/login/page";
 import { useRouter } from "next/navigation";
 
-export default function InterceptedImagePage({ params }) {
+export default function InterceptedLoginPage({ params }) {
   const router = useRouter();
 
   const handleBackdropClick = (event) => {

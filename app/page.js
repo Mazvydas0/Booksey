@@ -1,10 +1,6 @@
-import Image from "next/image";
-import NavBar from "@/components/navbar";
 import ImageSlideshow from "@/components/images/image-slideshow";
-import classes from "./page.module.css";
-import BookCard from "@/components/book-card";
+
 import BookList from "@/components/book-list";
-import Link from "next/link";
 
 export const books = [
   {

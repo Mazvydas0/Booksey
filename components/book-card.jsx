@@ -10,7 +10,7 @@ export default function BookCard({ title, book, altText, author }) {
       >
         <Image
           className="object-cover rounded-md shadow-md hover:opacity-50"
-          src={`https://${process.env.AWS_S3_HOSTNAME}/${book}.jpeg`}
+          src={`https://${process.env.NEXT_PUBLIC_AWS_S3_HOSTNAME}/${book}.jpeg`}
           alt={altText}
           width="192"
           height="256"

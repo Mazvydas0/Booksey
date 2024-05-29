@@ -1,3 +1,11 @@
-export default function BookShops(){
-    return <p className="mt-96 m-40 font-bold">Contacts</p>
+
+export default function ContactPage() {
+  return <div>Contact</div>
+}
+
+export function generateMetadata() {
+  return {
+    title: `Contacts | Book Store Next`,
+    description: "Contact us by provided means",
+  };
 }
