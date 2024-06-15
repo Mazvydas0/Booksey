@@ -2,6 +2,10 @@ import { useState } from "react";
 
 export default function PopupBubble({
   onClose,
+  name,
+  description,
+  address,
+  hours
 }) {
   return (
     <div className="relative">
@@ -25,18 +29,18 @@ export default function PopupBubble({
         </svg>
       </button>
       <h2 className="text-sm font-semibold text-gray-800 pr-8">
-        National Library of Mazvydas
+        {name}
       </h2>
       <p className="text-xs text-gray-600">
-        Here you can find our book store
+        {description}
       </p>
       <div className="mt-1">
         <h3 className="text-xs font-semibold text-gray-800">Address:</h3>
-        <p className="text-xs text-gray-600">Gedimino pr. 51, Vilnius</p>
+        <p className="text-xs text-gray-600">{address}</p>
       </div>
       <div className="mt-1">
         <h3 className="text-xs font-semibold text-gray-800">Working Hours:</h3>
-        <p className="text-xs text-gray-600">Mon-Fri: 9 AM - 6 PM</p>
+        <p className="text-xs text-gray-600">{hours}</p>
       </div>
     </div>
   );
