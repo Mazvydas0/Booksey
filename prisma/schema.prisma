@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model Books {
+  id        String  @id @default(cuid()) @map("_id")
+  author    String
+  title     String
+  year      Int
+  description String
+  price String
+  slug String
+  alt String
+}

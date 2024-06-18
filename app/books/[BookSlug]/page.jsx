@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { books } from "../../page";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import getAllBooks from "@/app/actions/getAllBooks";
 
 
-export default function BookDetail({ params }) {
-  const book = books.find((book) => book.slug === params.BookSlug);
+export default async function BookDetail({ params }) {
+  const allBooks = await getAllBooks();
+  const book = allBooks.find((book) => book.slug === params.BookSlug);
   if (!book) notFound()
     
     return (
@@ -43,8 +44,9 @@ export default function BookDetail({ params }) {
   );
 }
 
-export function generateMetadata({ params }) {
-  const book = books.find((book) => book.slug === params.BookSlug);
+export async function generateMetadata({ params }) {
+  const allBooks = await getAllBooks();
+  const book = allBooks.find((book) => book.slug === params.BookSlug);
   if (!book) return
 
   return {

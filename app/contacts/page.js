@@ -1,6 +1,5 @@
-
-export default function ContactPage() {
-  return <div>Contact</div>
+export default async function ContactPage() {
+  return <div>Contact</div>;
 }
 
 export function generateMetadata() {

@@ -1,10 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { books } from "@/app/page";
+import getAllBooks from "@/app/actions/getAllBooks";
 
-export default function IntercepteLoginPage({ params }) {
-  const book = books.find((book) => book.slug === params.BookSlug);
+export default async function IntercepteLoginPage({ params }) {
+  const allBooks = await getAllBooks();
+  const book = allBooks.find((book) => book.slug === params.BookSlug);
   const router = useRouter();
 
   const handleBackdropClick = (event) => {

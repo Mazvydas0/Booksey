@@ -1,8 +1,7 @@
-import { books } from "@/app/page";
-import Image from "next/image";
-
-export default function BookImage({ params }) {
-  const book = books.find((book) => book.slug === params.BookSlug);
+import getAllBooks from "@/app/actions/getAllBooks";
+export default async function BookImage({ params }) {
+  const allBooks = await getAllBooks();
+  const book = allBooks.find((book) => book.slug === params.BookSlug);
   return (
     <div className="flex justify-center items-center mt-36">
       <img

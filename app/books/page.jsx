@@ -1,10 +1,11 @@
 import BookList from "@/components/book-list";
-import { books } from "../page";
+import getAllBooks from "../actions/getAllBooks";
 
-export default function Books() {
+export default async function Books() {
+  const allBooks = await getAllBooks();
   return (
     <div className="mt-20 ">
-      <BookList books={books} />
+      <BookList books={allBooks} />
     </div>
   );
 }

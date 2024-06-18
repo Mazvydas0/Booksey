@@ -30,18 +30,7 @@ export const markers = [
 ];
 
 export default function MapComponent({ viewport, setViewport, selectedMarker, setSelectedMarker}) {
-  const [showPopup, setShowPopup] = useState(false);
   const mapRef = useRef(null);
-
-  const handleMarkerClick = () => {
-    setShowPopup(true);
-    setViewport((prevViewport) => ({ ...prevViewport, zoom: 15 }));
-    mapRef.current.flyTo({
-      center: [viewport.longitude, viewport.latitude],
-      zoom: 15, // Adjust zoom level as needed
-      duration: 2000, // Duration of the zoom animation in milliseconds
-    });
-  };
 
   useEffect(() => {
     if (mapRef.current && selectedMarker) {
@@ -62,7 +51,6 @@ export default function MapComponent({ viewport, setViewport, selectedMarker, se
         mapStyle={process.env.NEXT_PUBLIC_MAPBOX_STYLE}
         minZoom={3}
         maxZoom={20}
-        // onMove={(evt) => setViewport(evt.viewState)}
       >
         <GeolocateControl position="top-left" />
         <NavigationControl position="top-left" />
