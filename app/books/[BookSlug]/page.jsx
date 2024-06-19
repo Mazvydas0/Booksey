@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import getAllBooks from "@/app/actions/getAllBooks";
 
 
+const allBooks = await getAllBooks();
 export default async function BookDetail({ params }) {
-  const allBooks = await getAllBooks();
   const book = allBooks.find((book) => book.slug === params.BookSlug);
   if (!book) notFound()
     
@@ -45,7 +45,6 @@ export default async function BookDetail({ params }) {
 }
 
 export async function generateMetadata({ params }) {
-  const allBooks = await getAllBooks();
   const book = allBooks.find((book) => book.slug === params.BookSlug);
   if (!book) return
 
