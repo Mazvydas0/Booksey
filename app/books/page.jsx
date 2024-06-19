@@ -4,7 +4,7 @@ import getAllBooks from "../actions/getAllBooks";
 export default async function Books() {
   const allBooks = await getAllBooks();
   return (
-    <div className="mt-20 ">
+    <div>
       <BookList books={allBooks} />
     </div>
   );
@@ -12,7 +12,7 @@ export default async function Books() {
 
 export function generateMetadata() {
   return {
-    title: `All Books | Book Store Next`,
+    title: `All Books | Booksey`,
     description: "Books sold by us",
   };
 }

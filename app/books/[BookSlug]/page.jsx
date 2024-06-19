@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
   if (!book) return
 
   return {
-    title: `${book.title} | Book Store Next`,
+    title: `${book.title} | Booksey`,
     description: book.description,
   };
 }

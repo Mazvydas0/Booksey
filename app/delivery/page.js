@@ -4,7 +4,7 @@ export default function DeliveryPage() {
 
 export function generateMetadata() {
   return {
-    title: `Delivery | Book Store Next`,
+    title: `Delivery | Booksey`,
     description: "Get books delivered by these methods",
   };
 }

@@ -11,7 +11,10 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-to-r": "linear-gradient(90deg, #9CA3AF, #F8A055)",
+        "gradient-to-r": "linear-gradient(90deg, #9CA3AF, #fab377)",
+      },
+      animation: {
+        "ping-once": "ping 1s cubic-bezier(0, 0, 0.2, 1)",
       },
     },
   },

@@ -14,21 +14,26 @@ export default function BooksShops() {
   const [selectedMarker, setSelectedMarker] = useState(null);
 
   return (
-    <div className="flex h-screen w-screen">  
-      <div className="flex-1 mt-40 m-8 border p-2">
-        <MapPage
-          viewport={viewport}
-          setViewport={setViewport}
-          selectedMarker={selectedMarker}
-          setSelectedMarker={setSelectedMarker}
-        />
+    <>
+      <div className="flex flex-col items-center justify-center">
+          <h1 className="pt-8">Booksey stores near me</h1>
+        <div className="flex h-screen w-screen">
+          <div className="flex-1 mx-8 mb-8 mt-10 border p-2">
+            <MapPage
+              viewport={viewport}
+              setViewport={setViewport}
+              selectedMarker={selectedMarker}
+              setSelectedMarker={setSelectedMarker}
+            />
+          </div>
+          <div className="flex-1 mx-8 mb-8 mt-10 border">
+            <DescriptionPage
+              setViewport={setViewport}
+              setSelectedMarker={setSelectedMarker}
+            />
+          </div>
+        </div>
       </div>
-      <div className="flex-1 mt-40 m-8 border">
-        <DescriptionPage
-          setViewport={setViewport}
-          setSelectedMarker={setSelectedMarker}
-        />
-      </div>
-    </div>
+    </>
   );
 }

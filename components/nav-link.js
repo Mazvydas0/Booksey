@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 export default function NavLink({ children, href, classes }) {
     const path = usePathname()
   return (
-    <Link href={href} className={`${classes} ${path.startsWith(href) ? "bg-orange-300" : ""}`}>
+    <Link href={href} className={`${classes} ${path.startsWith(href) ? " font-bold" : ""}`}>
       {children}
     </Link>
   );

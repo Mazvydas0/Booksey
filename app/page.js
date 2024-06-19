@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <>
       <ImageSlideshow />
-      <main className="w-full mx-auto mt-32 ">
+      <main className="w-full mx-auto ">
         <BookList books={allBooks} />
       </main>
     </>

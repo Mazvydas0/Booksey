@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import AI4 from "@/public/AI4.jpeg";
+
 import AI5 from "@/public/AI5.webp";
 import AI6 from "@/public/AI6.webp";
 import AI7 from "@/public/AI7.jpeg";
 import AI8 from "@/public/AI8.jpeg";
 
 const images = [
-  { image: AI4, alt: "discount coupon" },
+
   { image: AI5, alt: "Joanna Pearson bestseller" },
   { image: AI6, alt: "fathers day" },
   { image: AI7, alt: "discover Swift River" },
@@ -29,7 +29,7 @@ export default function ImageSlideshow() {
   }, []);
 
   return (
-    <div className="relative top-[120px] w-full h-96 p-2">
+    <div className="relative w-full xl:max-w-screen-xl mx-auto md:h-64 sm:h-52 h-36 p-2 px-5">
       <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md">
         {images.map((image, index) => (
           <Image

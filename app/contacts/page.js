@@ -4,7 +4,7 @@ export default async function ContactPage() {
 
 export function generateMetadata() {
   return {
-    title: `Contacts | Book Store Next`,
+    title: `Contacts | Booksey`,
     description: "Contact us by provided means",
   };
 }
