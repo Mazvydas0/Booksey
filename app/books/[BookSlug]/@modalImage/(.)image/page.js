@@ -9,11 +9,11 @@ export default async function InterceptedLoginPage({ params }) {
   return (
     <ModalBackground>
       <div className="flex justify-center items-center mt-36">
-        <img
+        {/* <img
           className="max-w-[100%] h-full"
           src={`https://${process.env.NEXT_PUBLIC_AWS_S3_HOSTNAME}/${book.slug}.jpeg`}
           alt={book.alt}
-        />
+        /> */}
       </div>
     </ModalBackground>
   );

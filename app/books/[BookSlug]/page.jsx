@@ -10,11 +10,11 @@ export default async function BookDetail({ params }) {
   if (!book) notFound()
     
     return (
-      <div className="container mx-auto my-8 mt-44">
+      <div className="container my-8 mt-24">
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/3 px-4">
           <Link
-            href={`http://localhost:3000/books/${params.BookSlug}/image`}
+            href={`${process.env.NEXT_PUBLIC_BASE_URL}/books/${params.BookSlug}/image`}
             className="inline-block"
           >
             <Image
